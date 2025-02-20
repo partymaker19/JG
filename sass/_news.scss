@@ -1,0 +1,132 @@
+.news {
+  padding: 0 42px 0 42px;
+  @include media-small-desctop {
+    padding: 0 10px 0 10px;
+  }
+
+  &__title {
+    @include font($height: 100%, $size: 25px, $weight: 400);
+    font-family: $font-family;
+    text-transform: uppercase;
+    color: #328ca7;
+    margin: 0;
+
+    @include media-small-desctop {
+      @include font($height: 100%, $size: 12px, $weight: 400);
+    }
+  }
+
+  hr {
+    background-color: #328ca7;
+    height: 2px;
+    margin: 0;
+  }
+
+  &__cards {
+    margin-top: 30.43px;
+    display: flex;
+    gap: 39.7px;
+
+    @include media-small-desctop {
+      gap: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  &__data {
+    @include font($height: 100%, $size: 16px, $weight: 400);
+    font-family: $font-family;
+    color: #328da2;
+
+    @include media-small-desctop {
+      @include font($height: 100%, $size: 9px, $weight: 400);
+    }
+  }
+
+  &__text {
+    padding: 8px 15px;
+    height: 98px;
+    background: linear-gradient(
+      360deg,
+      rgba(103, 175, 197, 0.7) 0%,
+      rgba(255, 255, 255, 0.7) 100%
+    );
+
+    @include media-small-desctop {
+      border-radius: 0 0 1px 1px;
+      padding: 5px 9px;
+      height: 57px;
+    }
+  }
+
+  &__p {
+    @include font($height: 100%, $size: 16px, $weight: 400);
+    font-family: $second-family;
+    color: #333;
+    margin-top: 3.94px;
+    margin-bottom: 0;
+
+    @include media-small-desctop {
+      @include font($height: 100%, $size: 9px, $weight: 400);
+    }
+  }
+}
+
+.swiper-slide3 {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  justify-content: center;
+  border-radius: 2px 2px 0 0;
+  width: 300px !important;
+  cursor: pointer;
+
+  @include media-small-desctop {
+    width: 172px !important;
+  }
+}
+
+.swiper-button-prev-2,
+.swiper-button-next-2 {
+  width: 50px;
+  height: 50px;
+  background-color: #dcdbd5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+
+  @include media-small-desctop {
+    position: absolute;
+    top: 60%;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.swiper-button-prev-2:hover,
+.swiper-button-next-2:hover {
+  background-color: #c4dce3;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev-2::after,
+.swiper-button-next-2::after {
+  color: black;
+  font-size: 30px;
+
+  @include media-small-desctop {
+    font-size: 15px;
+  }
+}
+
+.swiper-button-prev-2::after {
+  top: 1px;
+  left: -2px;
+}
+
+.swiper-button-next-2::after {
+  top: 1px;
+  left: 2px;
+}
