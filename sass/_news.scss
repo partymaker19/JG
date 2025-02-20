@@ -63,7 +63,6 @@
     @include font($height: 100%, $size: 16px, $weight: 400);
     font-family: $second-family;
     color: #333;
-    margin-top: 3.94px;
     margin-bottom: 0;
 
     @include media-small-desctop {
@@ -79,7 +78,16 @@
   justify-content: center;
   border-radius: 2px 2px 0 0;
   width: 300px !important;
+
   cursor: pointer;
+
+  img {
+    height: 199px;
+
+    @include media-small-desctop {
+      height: 115px;
+    }
+  }
 
   @include media-small-desctop {
     width: 172px !important;

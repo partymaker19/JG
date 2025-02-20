@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     videoLink.style.display = "block";
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const readMoreButton = document.querySelector(".project__read-more");
   const moreText = document.querySelector(".project__more-text");
