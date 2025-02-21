@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
@@ -407,14 +406,7 @@ body {
   width: 649px;
   height: 45px;
   text-align: center;
-  background: linear-gradient(
-    91deg,
-    rgba(80, 145, 178, 0) 0%,
-    rgba(45, 83, 102, 0.75) 12.4%,
-    #223e4c 43.15%,
-    rgba(57, 104, 127, 0.5) 88.94%,
-    rgba(80, 145, 178, 0) 100%
-  );
+  background: linear-gradient(91deg, rgba(80, 145, 178, 0) 0%, rgba(45, 83, 102, 0.75) 12.4%, #223e4c 43.15%, rgba(57, 104, 127, 0.5) 88.94%, rgba(80, 145, 178, 0) 100%);
 }
 @media (max-width: 768px) {
   .banner__title-h3 {
@@ -546,11 +538,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(115, 115, 115, 0) 32.9%,
-    rgba(34, 62, 76, 0.8) 100%
-  );
+  background: linear-gradient(180deg, rgba(115, 115, 115, 0) 32.9%, rgba(34, 62, 76, 0.8) 100%);
   pointer-events: none;
 }
 
@@ -563,7 +551,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .project {
@@ -606,9 +594,7 @@ body {
 }
 @media (max-width: 768px) {
   .project__main-block {
-    flex-direction: column;
-    align-items: start;
-    gap: 8px;
+    display: block;
     margin-top: 15px;
   }
 }
@@ -621,6 +607,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 54px;
+}
+@media (max-width: 768px) {
+  .project__second-block {
+    margin-top: 8px;
+  }
 }
 .project__time {
   font-size: 35px;
@@ -743,7 +734,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .project__video-play-btn {
@@ -1258,7 +1249,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 768px) {
   .swiper-slide2 {
@@ -1274,12 +1265,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(217, 217, 217, 0) 0%,
-    rgba(81, 155, 178, 0.7) 134.37%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(81, 155, 178, 0.7) 134.37%, rgba(0, 0, 0, 0.8) 100%);
   pointer-events: none;
 }
 
@@ -1394,11 +1380,7 @@ body {
 .news__text {
   padding: 8px 15px;
   height: 98px;
-  background: linear-gradient(
-    360deg,
-    rgba(103, 175, 197, 0.7) 0%,
-    rgba(255, 255, 255, 0.7) 100%
-  );
+  background: linear-gradient(360deg, rgba(103, 175, 197, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
 @media (max-width: 768px) {
   .news__text {
@@ -2125,7 +2107,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 768px) {
   .club-news__img {
@@ -2255,7 +2237,7 @@ body {
 .about__banner-block img {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .about__club-text-soc {
   display: flex;
@@ -2266,7 +2248,7 @@ body {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr;
   -moz-column-gap: 98px;
-  column-gap: 98px;
+       column-gap: 98px;
   row-gap: 13px;
 }
 @media (max-width: 768px) {
@@ -2371,4 +2353,4 @@ body {
     width: 20px;
     height: 20px;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
