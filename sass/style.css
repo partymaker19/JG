@@ -1221,6 +1221,8 @@ body {
   cursor: pointer;
   border: 1.52px solid #328ca7;
   display: none;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 @media (max-width: 768px) {
   .clubs__select {
