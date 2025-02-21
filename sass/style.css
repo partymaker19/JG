@@ -1226,7 +1226,7 @@ body {
   display: none;
   -moz-text-align-last: center;
        text-align-last: center;
-  background: url("../img/arrow-sown.svg") no-repeat right 10px center;
+  background: url("../img/arrow-sown.svg") no-repeat right 2px center;
   background-size: 12px;
 }
 @media (max-width: 768px) {
