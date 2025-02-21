@@ -309,6 +309,10 @@
   }
 
   &__select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     @include font($height: 110%, $size: 16px, $weight: 400);
     font-family: $font-family;
     color: #000;
@@ -321,10 +325,11 @@
     border: 1.52px solid #328ca7;
     display: none;
     text-align-last: center;
+    background: url("../img/arrow-sown.svg") no-repeat right 10px center;
+    background-size: 12px;
 
     @include media-small-desctop {
-      display: flex;
-      justify-content: center;
+      display: block;
       @include font($height: 110%, $size: 12px, $weight: 400);
       border-radius: 20px;
       height: 30px;
