@@ -1221,9 +1221,7 @@ body {
   cursor: pointer;
   border: 1.52px solid #328ca7;
   display: none;
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-       appearance: none !important;
+  -webkit-appearance: none;
 }
 @media (max-width: 768px) {
   .clubs__select {
