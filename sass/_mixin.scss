@@ -5,6 +5,12 @@
   line-height: $height;
 }
 
+@mixin media-big-desktop {
+  @media (max-width: $desctop-big-desktop-width) {
+    @content;
+  }
+}
+
 @mixin media-tablet {
   @media (max-width: $desctop-tablet-width) {
     @content;
@@ -19,6 +25,12 @@
 
 @mixin media-desctop {
   @media (max-width: $desctop-desktop-width) {
+    @content;
+  }
+}
+
+@mixin media-big-tablet {
+  @media (max-width: $desctop-big-tablet-width) {
     @content;
   }
 }

@@ -1055,10 +1055,15 @@ body {
   position: relative;
   background: url("../img/army.png") no-repeat center center;
   border-radius: 45px;
-  width: 66%;
+  width: 794px;
   height: 405px;
   margin: 90px auto;
   overflow: hidden;
+}
+@media (max-width: 853px) {
+  .clubs__erip {
+    width: 706px;
+  }
 }
 @media (max-width: 768px) {
   .clubs__erip {
@@ -1099,6 +1104,14 @@ body {
   letter-spacing: 2.9px;
   color: #223e4c;
   margin: 0;
+}
+@media (max-width: 853px) {
+  .clubs__erip-title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+  }
 }
 @media (max-width: 768px) {
   .clubs__erip-title {
@@ -2175,6 +2188,13 @@ body {
   grid-template-rows: auto auto auto;
   justify-content: space-between;
   gap: 10px;
+}
+@media (max-width: 1250px) {
+  .club-news__img-blocks {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
 }
 @media (max-width: 768px) {
   .club-news__img-blocks {

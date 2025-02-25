@@ -175,10 +175,14 @@
     position: relative;
     background: url("../img/army.png") no-repeat center center;
     border-radius: 45px;
-    width: 66%;
+    width: 794px;
     height: 405px;
     margin: 90px auto;
     overflow: hidden;
+
+    @include media-big-tablet {
+      width: 706px;
+    }
 
     @include media-small-desctop {
       border-radius: 17px;
@@ -217,6 +221,10 @@
     letter-spacing: 2.9px;
     color: #223e4c;
     margin: 0;
+
+    @include media-big-tablet {
+      @include font($height: 100%, $size: 26px, $weight: 400);
+    }
 
     @include media-small-desctop {
       @include font($height: 100%, $size: 16px, $weight: 400);
