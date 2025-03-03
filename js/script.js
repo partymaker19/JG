@@ -32,14 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       const textToCopy = element.getAttribute("data-copy");
       if (window.innerWidth <= 768) {
-        // Проверка на мобильное устройство
         if (textToCopy) {
           window.location.href = `tel:${textToCopy}`;
         } else {
           console.error("Атрибут 'data-copy' не найден");
         }
       } else {
-        // Десктопная версия
         if (textToCopy) {
           copyTextToClipboard(textToCopy);
         } else {
@@ -51,13 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function copyTextToClipboard(text) {
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-  alert("Текст скопирован в буфер обмена");
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("Текст скопирован в буфер обмена");
+    })
+    .catch((err) => {
+      console.error("Не удалось скопировать текст: ", err);
+    });
 }
 
 //Модальное окно
