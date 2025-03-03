@@ -34,3 +34,9 @@
     @content;
   }
 }
+
+@mixin media-small-mobile {
+  @media (max-width: $desctop-small-mobile-width) {
+    @content;
+  }
+}

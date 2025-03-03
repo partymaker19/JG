@@ -223,7 +223,7 @@ body {
     padding: 10px 20px;
     width: 167px;
     height: 183px;
-    margin-top: 93px;
+    margin-top: 90px;
     top: 0;
     right: 0;
     z-index: 10;
@@ -503,6 +503,11 @@ body {
 }
 @media (max-width: 768px) {
   .mySwiper1 {
+    width: 380px !important;
+  }
+}
+@media (max-width: 380px) {
+  .mySwiper1 {
     width: 320px !important;
   }
 }
@@ -525,6 +530,12 @@ body {
   transition: opacity 0.3s ease;
 }
 @media (max-width: 768px) {
+  .swiper-slide1 {
+    width: 340px !important;
+    height: 180px;
+  }
+}
+@media (max-width: 380px) {
   .swiper-slide1 {
     width: 300px !important;
     height: 140px;
@@ -1636,6 +1647,14 @@ body {
     font-weight: 400;
     line-height: 100%;
   }
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
 }
 
 .footer {

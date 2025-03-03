@@ -9,21 +9,56 @@ function copyTextToClipboard(text) {
     });
 }
 
-//Обработчик события для всех элементов с классом 'copy-to-clipboard'
+// //Обработчик события для всех элементов с классом 'copy-to-clipboard'
+// document.addEventListener("DOMContentLoaded", () => {
+//   const copyElements = document.querySelectorAll(".copy-to-clipboard");
+//   copyElements.forEach((element) => {
+//     element.addEventListener("click", (event) => {
+//       event.preventDefault();
+//       const textToCopy = element.getAttribute("data-copy");
+//       if (textToCopy) {
+//         copyTextToClipboard(textToCopy);
+//       } else {
+//         console.error("Атрибут 'data-copy' не найден");
+//       }
+//     });
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const copyElements = document.querySelectorAll(".copy-to-clipboard");
   copyElements.forEach((element) => {
     element.addEventListener("click", (event) => {
       event.preventDefault();
       const textToCopy = element.getAttribute("data-copy");
-      if (textToCopy) {
-        copyTextToClipboard(textToCopy);
+      if (window.innerWidth <= 768) {
+        // Проверка на мобильное устройство
+        if (textToCopy) {
+          window.location.href = `tel:${textToCopy}`;
+        } else {
+          console.error("Атрибут 'data-copy' не найден");
+        }
       } else {
-        console.error("Атрибут 'data-copy' не найден");
+        // Десктопная версия
+        if (textToCopy) {
+          copyTextToClipboard(textToCopy);
+        } else {
+          console.error("Атрибут 'data-copy' не найден");
+        }
       }
     });
   });
 });
+
+function copyTextToClipboard(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+  alert("Текст скопирован в буфер обмена");
+}
 
 //Модальное окно
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const burgerItem = document.querySelector(".header__burger");
   const menu = document.querySelector(".header__nav");
   const menuCloseItem = document.querySelector(".header__nav-close");
+  const menuLinks = document.querySelectorAll(".header__nav a");
   burgerItem.addEventListener("click", () => {
     menu.classList.add("header__nav-active");
     menuCloseItem.classList.add("open-close-item");
@@ -55,6 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("header__nav-active");
     menuCloseItem.classList.remove("open-close-item");
     burgerItem.classList.remove("close-burger-item");
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("header__nav-active");
+      menuCloseItem.classList.remove("open-close-item");
+      burgerItem.classList.remove("close-burger-item");
+    });
   });
 })();
 

@@ -13,10 +13,10 @@ const swiper = new Swiper(".mySwiper1", {
   },
   loop: true,
   loopedSlides: 3,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 15000,
+  //   disableOnInteraction: false,
+  // },
   slideToClickedSlide: true,
   simulateTouch: true,
 });

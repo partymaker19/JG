@@ -105,3 +105,11 @@
     @include font($height: 100%, $size: 11px, $weight: 400);
   }
 }
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white !important;
+}

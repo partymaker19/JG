@@ -102,6 +102,9 @@
   width: 100% !important;
   background: none;
   @include media-small-desctop {
+    width: 380px !important;
+  }
+  @include media-small-mobile {
     width: 320px !important;
   }
 }
@@ -125,6 +128,11 @@
   }
 
   @include media-small-desctop {
+    width: 340px !important;
+    height: 180px;
+  }
+
+  @include media-small-mobile {
     width: 300px !important;
     height: 140px;
   }
